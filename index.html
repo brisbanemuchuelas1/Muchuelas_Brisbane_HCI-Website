@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CraveCart | Fresh Food Delivered Fast</title>
+    <meta
+      name="description"
+      content="CraveCart offers fresh burgers, pizza, pasta, desserts, and drinks delivered to your door."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <div class="brand" aria-label="CraveCart home">
+          <div class="brand-mark">C</div>
+          <span>CraveCart</span>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" type="button" aria-label="Open shopping cart">
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">Fresh Meals, Fast Delivery</span>
+            <h1>Crave-worthy food delivered to your door.</h1>
+            <p>
+              Discover chef-crafted meals made with premium ingredients, delivered hot and on time.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#menu" class="primary-btn">Order Now</a>
+              <a href="#about" class="secondary-btn">Why Choose Us</a>
+            </div>
+
+            <ul class="hero-highlights" aria-label="Highlights">
+              <li><strong>15 min</strong><span>Avg. delivery</span></li>
+              <li><strong>4.8/5</strong><span>Customer rating</span></li>
+              <li><strong>1.2k+</strong><span>Orders / week</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Food showcase">
+            <div class="dish-display">
+              <img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
+                alt="Burger plate"
+              />
+            </div>
+            <div class="floating-card card-two">
+              <div class="mini-rating">★ 4.9</div>
+              <strong>Best Seller</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip">
+        <div class="container feature-grid">
+          <div class="feature-item">
+            <span class="feature-icon">🚚</span>
+            <div>
+              <h3>Fast Delivery</h3>
+              <p>Hot meals delivered in under 30 minutes.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🥗</span>
+            <div>
+              <h3>Fresh Ingredients</h3>
+              <p>Quality ingredients with every order.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">💳</span>
+            <div>
+              <h3>Secure Payments</h3>
+              <p>Simple checkout with trusted payment methods.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Our Menu</span>
+              <h2>Pick your favorite meal</h2>
+            </div>
+            <div class="search-wrap">
+              <label class="sr-only" for="menuSearch">Search menu</label>
+              <input id="menuSearch" type="search" placeholder="Search dishes..." aria-label="Search menu items" />
+            </div>
+          </div>
+
+          <div class="category-bar" aria-label="Food categories">
+            <button class="category-button active" type="button" data-category="All">All</button>
+            <button class="category-button" type="button" data-category="Burgers">Burgers</button>
+            <button class="category-button" type="button" data-category="Pizza">Pizza</button>
+            <button class="category-button" type="button" data-category="Pasta">Pasta</button>
+             <button class="category-button" type="button" data-category="Salads">Salads</button>
+            <button class="category-button" type="button" data-category="Drinks">Drinks</button>
+            <button class="category-button" type="button" data-category="Desserts">Desserts</button>
+            <button class="category-button" type="button" data-category="Wraps">Wraps</button>
+            <button class="category-button" type="button" data-category="Sides">Sides</button>
+          </div>
+
+          <div class="menu-layout">
+            <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+
+            <aside class="cart-panel" aria-label="Shopping cart summary">
+              <div class="cart-header">
+                <h3>Your Cart</h3>
+                <span class="cart-pill">Ready for checkout</span>
+              </div>
+
+              <div class="cart-items" id="cartItems"></div>
+
+              <div class="totals-box">
+                <div class="totals-row">
+                  <span>Subtotal</span>
+                  <strong id="subtotalValue">₱0.00</strong>
+                </div>
+                <div class="totals-row">
+                  <span>Delivery</span>
+                  <strong id="deliveryValue">₱0.00</strong>
+                </div>
+                <div class="totals-row grand-total">
+                  <span>Total</span>
+                  <strong id="totalValue">₱0.00</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <div class="container checkout-grid">
+          <div class="checkout-copy">
+            <span class="eyebrow">Checkout</span>
+            <h2>Complete your order</h2>
+            <p>Fill in your details and we’ll prepare your fresh meal delivery right away.</p>
+          </div>
+
+          <form id="checkoutForm" class="checkout-form">
+            <div class="field-group">
+              <label>Order Type</label>
+              <div class="button-group">
+                <label class="button-option">
+                  <input type="radio" name="orderType" value="delivery" checked />
+                  <span>Delivery</span>
+                </label>
+                <label class="button-option">
+                  <input type="radio" name="orderType" value="pickup" />
+                  <span>Pick Up</span>
+                </label>
+                <label class="button-option">
+                  <input type="radio" name="orderType" value="reservation" />
+                  <span>Reservation</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="customerName">Full Name</label>
+              <input id="customerName" type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="field-group">
+              <label for="phone">Phone Number</label>
+              <input id="phone" type="tel" placeholder="e.g. +63 912 345 6789" required />
+            </div>
+
+            <div class="field-group">
+              <label for="address">Delivery Address</label>
+              <textarea id="address" rows="3" placeholder="Street, area, city"></textarea>
+            </div>
+
+            <div class="field-group">
+              <label for="paymentMethod">Payment Method</label>
+              <select id="paymentMethod" aria-label="Payment method">
+                <option>Cash on Delivery</option>
+                <option>Credit Card</option>
+                <option>Mobile Wallet</option>
+              </select>
+            </div>
+
+            <div id="contactField" class="field-group" style="display: none;">
+              <label>📞 CraveCart Contact</label>
+              <p style="margin: 0; font-weight: 600; color: var(--primary);">+63 912 345 6789</p>
+            </div>
+
+            <button type="submit" class="primary-btn checkout-btn">Place Order</button>
+            <div id="successMessage" class="success-message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <span class="eyebrow">Why Us</span>
+            <h2>Fresh flavors, crafted with care</h2>
+            <p>
+              CraveCart brings together delicious comfort food, premium ingredients, and a seamless ordering experience designed around your schedule.
+            </p>
+            <ul>
+              <li>Locally sourced ingredients and seasonal menu updates</li>
+              <li>Easy online ordering with transparent pricing</li>
+              <li>Support for dietary preferences and custom modifications</li>
+            </ul>
+          </div>
+
+          <div class="about-visual">
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
+              alt="Chef preparing food"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section" id="reviews">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="eyebrow">Testimonials</span>
+            <h2>People love CraveCart</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>“The food arrived hot, fresh, and exactly as described. The burger was incredible.”</p>
+              <div class="customer-meta">
+                <strong>Sarah M.</strong>
+                <span>Food blogger</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>“Fast service and very user-friendly ordering. The pizza was packed perfectly and delicious.”</p>
+              <div class="customer-meta">
+                <strong>John D.</strong>
+                <span>Student</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>“Perfect for busy nights. The app-like experience made ordering effortless.”</p>
+              <div class="customer-meta">
+                <strong>Alicia T.</strong>
+                <span>Office worker</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <div class="brand-mark">C</div>
+            <span>CraveCart</span>
+          </div>
+          <p>Fresh food, quick delivery, and memorable local flavor.</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>+63 912 345 6789</li>
+            <li>contact@cravecart.com</li>
+            <li>Philippines</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2026 CraveCart. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
