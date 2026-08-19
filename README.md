@@ -117,6 +117,3 @@ This project does not include a license by default. If intended to be open-sourc
 
 For questions or help with the site, contact the project owner.
 
----
-
-Thanks for building CraveCart — this README should provide a clear starting point for development, testing, and deployment. If any specific setup or build steps exist (tooling, preprocessors, or frameworks), share them and the README can be expanded with exact commands and examples.
