@@ -46,7 +46,7 @@ const menuItems = [
     price: 239,
     rating: 4.8,
     description: 'Fettuccine tossed in creamy parmesan sauce with spinach and garlic.',
-    image: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&fit=crop&w=900&q=80',
+    image: './alfredo-5.png',
     badge: 'Comfort'
   },
   {
