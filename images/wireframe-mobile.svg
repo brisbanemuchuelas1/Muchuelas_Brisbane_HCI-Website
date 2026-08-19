@@ -1,0 +1,21 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="375" height="800" viewBox="0 0 375 800">
+  <rect width="375" height="800" fill="#ffffff" stroke="#ddd"/>
+  <rect x="10" y="10" width="355" height="60" fill="#f3f3f3" stroke="#ccc"/>
+  <text x="20" y="45" font-family="Arial" font-size="16" fill="#333">Header / Hamburger / Cart</text>
+
+  <rect x="10" y="80" width="355" height="140" fill="#fafafa" stroke="#e0e0e0"/>
+  <text x="20" y="150" font-family="Arial" font-size="14" fill="#666">Hero / Headline · CTA</text>
+
+  <rect x="10" y="230" width="355" height="420" fill="#fff" stroke="#e6e6e6"/>
+  <text x="20" y="260" font-family="Arial" font-size="13" fill="#666">Product list (stacked cards)</text>
+
+  <rect x="10" y="665" width="355" height="60" fill="#f3f3f3" stroke="#ccc"/>
+  <text x="20" y="700" font-family="Arial" font-size="12" fill="#666">Footer (contact · links)</text>
+
+  <!-- Example stacked product card boxes -->
+  <g fill="#f7f7f7" stroke="#ddd">
+    <rect x="20" y="280" width="335" height="120"/>
+    <rect x="20" y="410" width="335" height="120"/>
+  </g>
+  <text x="30" y="320" font-family="Arial" font-size="12" fill="#999">Product card</text>
+</svg>
